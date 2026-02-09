@@ -3,13 +3,13 @@ import { RadarPreview } from "./radar-preview"
 export function RadarSection() {
   return (
     <section className="px-6 py-20 md:py-28">
-      <div className="max-w-3xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-10">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-10 text-center">
           <div className="flex-1">
             <p className="text-sm font-medium text-accent tracking-wide uppercase mb-3">
               Visualization
             </p>
-            <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground text-balance">
+            <h2 className="font-sans text-2xl md:text-3xl font-bold text-foreground text-balance">
               六個面向的韌性輪廓
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">

@@ -5,7 +5,7 @@ export function CTA() {
   return (
     <section className="px-6 py-24 md:py-32 bg-card">
       <div className="max-w-xl mx-auto text-center">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground text-balance leading-tight">
+        <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground text-balance leading-tight">
           先確認現在的位置
           <br />
           再慢慢想接下來的事

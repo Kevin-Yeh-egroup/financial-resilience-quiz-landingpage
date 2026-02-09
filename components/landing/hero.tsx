@@ -10,12 +10,12 @@ export function Hero() {
       </div>
 
       <div className="relative max-w-2xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground mb-8">
+        <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-sm text-muted-foreground mb-8">
           <span className="inline-block w-2 h-2 rounded-full bg-accent" />
           10 題 / 約 3-5 分鐘
         </div>
 
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground text-balance">
+        <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground text-balance">
           想了解自己現在的
           <br />
           <span className="text-accent">財務狀態</span>嗎？
@@ -32,15 +32,15 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 border border-border">
+          <div className="flex items-center gap-2 bg-secondary rounded-full px-4 py-2 border border-border">
             <CheckCircleIcon />
             <span>不用輸入金額</span>
           </div>
-          <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 border border-border">
+          <div className="flex items-center gap-2 bg-secondary rounded-full px-4 py-2 border border-border">
             <CheckCircleIcon />
             <span>沒有對錯，不會貼標籤</span>
           </div>
-          <div className="flex items-center gap-2 bg-card rounded-full px-4 py-2 border border-border">
+          <div className="flex items-center gap-2 bg-secondary rounded-full px-4 py-2 border border-border">
             <CheckCircleIcon />
             <span>約 3-5 分鐘</span>
           </div>

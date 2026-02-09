@@ -18,11 +18,11 @@ const personas = [
 export function WhoIsItFor() {
   return (
     <section className="px-6 py-24 md:py-32">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto text-center">
         <p className="text-sm font-medium text-accent tracking-wide uppercase mb-3">
           For You
         </p>
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground text-balance">
+        <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground text-balance">
           這個測驗適合誰
         </h2>
 
@@ -32,7 +32,7 @@ export function WhoIsItFor() {
             return (
               <div
                 key={persona.text}
-                className="flex items-center gap-5 p-5 rounded-xl bg-card border border-border"
+                className="flex flex-col items-center gap-4 p-5 rounded-xl bg-card border border-border text-center max-w-xl mx-auto"
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent">
                   <Icon className="w-5 h-5" />

@@ -41,7 +41,7 @@ export function RadarPreview() {
         else ctx.lineTo(x, y)
       }
       ctx.closePath()
-      ctx.strokeStyle = "rgba(0,0,0,0.06)"
+      ctx.strokeStyle = "rgba(110, 80, 90, 0.08)"
       ctx.lineWidth = 1
       ctx.stroke()
     }
@@ -52,7 +52,7 @@ export function RadarPreview() {
       ctx.beginPath()
       ctx.moveTo(cx, cy)
       ctx.lineTo(cx + Math.cos(angle) * maxR, cy + Math.sin(angle) * maxR)
-      ctx.strokeStyle = "rgba(0,0,0,0.06)"
+      ctx.strokeStyle = "rgba(110, 80, 90, 0.08)"
       ctx.lineWidth = 1
       ctx.stroke()
     }
@@ -68,9 +68,9 @@ export function RadarPreview() {
       else ctx.lineTo(x, y)
     }
     ctx.closePath()
-    ctx.fillStyle = "rgba(86, 138, 113, 0.15)"
+    ctx.fillStyle = "rgba(248, 150, 184, 0.22)"
     ctx.fill()
-    ctx.strokeStyle = "rgba(86, 138, 113, 0.6)"
+    ctx.strokeStyle = "rgba(248, 150, 184, 0.7)"
     ctx.lineWidth = 2
     ctx.stroke()
 
@@ -82,13 +82,13 @@ export function RadarPreview() {
       const y = cy + Math.sin(angle) * maxR * val
       ctx.beginPath()
       ctx.arc(x, y, 3.5, 0, Math.PI * 2)
-      ctx.fillStyle = "rgba(86, 138, 113, 0.8)"
+      ctx.fillStyle = "rgba(248, 150, 184, 0.9)"
       ctx.fill()
     }
 
     // Draw labels
-    ctx.font = "11px sans-serif"
-    ctx.fillStyle = "rgba(0,0,0,0.45)"
+    ctx.font = '11px "Noto Sans TC", sans-serif'
+    ctx.fillStyle = "rgba(98, 70, 78, 0.55)"
     ctx.textAlign = "center"
     ctx.textBaseline = "middle"
     for (let i = 0; i < sides; i++) {

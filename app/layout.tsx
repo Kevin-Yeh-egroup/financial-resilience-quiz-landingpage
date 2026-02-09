@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Noto_Sans_TC, Noto_Serif_TC } from 'next/font/google'
+import { Noto_Sans_TC } from 'next/font/google'
 
 import './globals.css'
 
@@ -10,12 +10,6 @@ const notoSans = Noto_Sans_TC({
   weight: ['300', '400', '500', '700'],
 })
 
-const notoSerif = Noto_Serif_TC({
-  subsets: ['latin'],
-  variable: '--font-noto-serif',
-  weight: ['400', '700'],
-})
-
 export const metadata: Metadata = {
   title: '財務韌性檢測 — 了解你現在的財務狀態',
   description:
@@ -23,7 +17,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#f0ebe4',
+  themeColor: '#fff6f1',
 }
 
 export default function RootLayout({
@@ -34,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body
-        className={`${notoSans.variable} ${notoSerif.variable} font-sans antialiased`}
+        className={`${notoSans.variable} font-sans antialiased`}
       >
         {children}
       </body>
