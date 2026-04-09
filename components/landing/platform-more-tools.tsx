@@ -42,6 +42,11 @@ const utilityTools = [
     href: "https://www.familyfinhealth.com/ask-ivy",
   },
   {
+    title: "免費個人線上財務諮詢",
+    description: "可以免費在線上與財務健康諮詢師討論",
+    href: "https://www.familyfinhealth.com/online-consultation",
+  },
+  {
     title: "知識庫",
     description: "快速查找知識與經驗",
     href: "https://www.familyfinhealth.com/knowledge-base",
