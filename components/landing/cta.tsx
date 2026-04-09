@@ -3,27 +3,32 @@ import { ArrowRight } from "lucide-react"
 
 export function CTA() {
   return (
-    <section className="px-6 py-24 md:py-32 bg-card">
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground text-balance leading-tight">
+    <section
+      id="assessment"
+      className="scroll-mt-8 scroll-mb-24 border-t border-border/60 bg-card px-6 py-20 md:scroll-mb-0 md:py-28"
+    >
+      <div className="mx-auto max-w-xl text-center">
+        <h2 className="font-sans text-balance text-3xl font-bold leading-tight text-foreground md:text-4xl">
           先確認現在的位置
           <br />
           再慢慢想接下來的事
         </h2>
 
-        <p className="mt-6 text-muted-foreground leading-relaxed max-w-md mx-auto">
+        <p className="mx-auto mt-6 max-w-md text-pretty text-base leading-[1.65] text-muted-foreground">
           這個測驗不會要求你立刻改變什麼，也不會替你做任何決定。它只是陪你把「現在」整理清楚。
         </p>
 
         <Button
           size="lg"
-          className="mt-10 rounded-full px-8 py-6 text-base font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+          className="mt-10 h-12 min-h-12 w-full max-w-sm rounded-full px-8 text-base font-semibold shadow-lg shadow-primary/20 touch-manipulation sm:max-w-xs"
         >
           確認你的財務韌性
-          <ArrowRight className="ml-2 w-4 h-4" />
+          <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
 
-        <p className="mt-4 text-sm text-muted-foreground">約 3-5 分鐘</p>
+        <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+          約 3–5 分鐘完成
+        </p>
       </div>
     </section>
   )

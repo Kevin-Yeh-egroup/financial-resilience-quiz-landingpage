@@ -6,95 +6,88 @@ const results = [
   {
     number: "01",
     icon: Activity,
-    title: "一個整體狀態的提醒",
-    description: "幫你快速了解，目前的生活狀態是：",
-    bullets: [
-      "大致穩定",
-      "還撐得住，但有點吃力",
-      "有些地方需要多留意",
-    ],
-    note: "這不是好壞比較，而是你現在大概站在哪個位置。",
+    title: "整體狀態在哪一區",
+    lead: "一句話標出大致位置：",
+    bullets: ["大致穩定", "還撐得住，但有點吃力", "需多留意"],
+    footnote: "不比好壞，只標位置。",
   },
   {
     number: "02",
     icon: PawPrint,
-    title: "一個貼近生活的狀態描述",
-    description: "系統會用一個動物，來形容你現在的狀態，例如：",
-    bullets: [
-      "穩定前行的烏龜",
-      "努力撐住的螞蟻",
-      "正在慢慢恢復的小熊",
-    ],
-    note: "這不是分類你是哪一種人，而是用一個比較好理解的方式，描述你現在是怎麼撐住生活的。",
+    title: "生活化的狀態比喻",
+    lead: "用動物意象描述「現在怎麼撐住」，例如：",
+    bullets: ["穩定前行的烏龜", "努力撐住的螞蟻", "慢慢恢復的小熊"],
+    footnote: "幫你感受現況，不是把人分類。",
   },
   {
     number: "03",
     icon: Compass,
-    title: "一段結構上的提醒",
-    description: "這一段會幫你整理：",
-    bullets: [
-      "目前主要的支撐點在哪裡？",
-      "哪些地方如果再有變化，壓力可能會變大？",
-      "現在比較像是暫時撐住，還是已經慢慢穩定？",
-    ],
-    note: "這不是預測未來，只是幫你把現在的狀態說清楚。",
+    title: "結構式整理",
+    lead: "把支撐與壓力點說清楚：",
+    bullets: ["主要支撐在哪", "哪裡一變動壓力容易變大", "暫撐住或漸趨穩定"],
+    footnote: "整理現況，不預測未來。",
   },
 ]
 
 export function ResultsPreview() {
   return (
-    <section className="px-6 py-24 md:py-32 bg-card">
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="text-sm font-medium text-accent tracking-wide uppercase mb-3">
-          Results
-        </p>
-        <h2 className="font-sans text-3xl md:text-4xl font-bold text-foreground text-balance">
-          你會看到什麼結果
-        </h2>
-        <p className="mt-3 text-lg text-muted-foreground max-w-md mx-auto">
-          結果是一份「現況整理」，不是評分表
-        </p>
+    <section className="border-t border-border/60 bg-card px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-5xl">
+        <div className="text-center">
+          <p className="mb-2 text-sm font-medium uppercase tracking-wide text-accent">
+            Results
+          </p>
+          <h2 className="font-sans text-balance text-3xl font-bold text-foreground md:text-4xl">
+            你會看到什麼結果
+          </h2>
+          <p className="mx-auto mt-3 max-w-md text-pretty text-base text-muted-foreground md:text-lg">
+            一份現況整理，不是評分表
+          </p>
+        </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
           {results.map((item) => {
             const Icon = item.icon
             return (
-              <div
+              <article
                 key={item.number}
-                className="group relative flex flex-col items-center text-center p-5 md:p-6 rounded-2xl bg-background border border-border transition-all hover:border-accent/40 hover:shadow-sm md:aspect-square"
+                className="group flex flex-col rounded-2xl border border-border bg-background p-5 text-left shadow-sm transition-all hover:border-accent/40 hover:shadow-md md:p-6"
               >
-                <span className="absolute top-5 right-5 text-3xl font-bold text-muted/80 select-none">
-                  {item.number}
-                </span>
-
-                <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center text-accent mb-4">
-                  <Icon className="w-5 h-5" />
+                <div className="flex items-start gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                    <Icon className="h-5 w-5" aria-hidden />
+                  </div>
+                  <div className="min-w-0 flex-1 pt-0.5">
+                    <div className="flex items-baseline justify-between gap-2">
+                      <h3 className="text-base font-semibold leading-snug text-foreground">
+                        {item.title}
+                      </h3>
+                      <span className="shrink-0 text-xs font-semibold tabular-nums text-muted-foreground/70">
+                        {item.number}
+                      </span>
+                    </div>
+                    <p className="mt-2 text-sm leading-snug text-muted-foreground">
+                      {item.lead}
+                    </p>
+                  </div>
                 </div>
 
-                <h3 className="font-semibold text-foreground text-base md:text-lg">
-                  {item.title}
-                </h3>
-
-                <p className="mt-2 text-sm text-muted-foreground leading-snug">
-                  {item.description}
-                </p>
-
-                <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
+                <ul className="mt-3 space-y-1.5 border-t border-border/60 pt-3 text-sm leading-snug text-foreground/90">
                   {item.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start justify-center gap-2"
-                    >
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent/60 flex-shrink-0" />
-                      {bullet}
+                    <li key={bullet} className="flex gap-2 pl-0.5">
+                      <span
+                        className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent/50"
+                        aria-hidden
+                      />
+                      <span>{bullet}</span>
                     </li>
                   ))}
                 </ul>
 
-                <p className="mt-3 text-xs text-foreground/70 italic leading-snug">
-                  {item.note}
+                <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                  {item.footnote}
                 </p>
-              </div>
+              </article>
             )
           })}
         </div>
